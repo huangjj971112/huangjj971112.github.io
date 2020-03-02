@@ -5,10 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="搭建博客总结, 星空之下">
-    <meta name="description" content="我的博客总结搭建博客的主要步骤
-下载并安装Git工具，一路next就好了
-下载并安装nodejs，记得勾选 add to path（这样的话就不要去电脑上配置环境变量了）
-安装hexo&amp;emsp;&amp;emsp;可以使用git-bash进行安装">
+    <meta name="description" content="我的博客总结搭建博客的主要步骤Git的安装&amp;emsp;&amp;emsp;Git下载地址,下载完成以后运行exe，一直next，不需要任何操作。
+node.js的安装&amp;emsp;&amp;emsp;node.js下载地址,下载完成以后，运行exe，一直ne">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -381,9 +379,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Hexo/" target="_blank">
+                                <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -410,16 +412,18 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="我的博客总结"><a href="#我的博客总结" class="headerlink" title="我的博客总结"></a>我的博客总结</h1><h2 id="搭建博客的主要步骤"><a href="#搭建博客的主要步骤" class="headerlink" title="搭建博客的主要步骤"></a>搭建博客的主要步骤</h2><ol>
-<li>下载并安装Git工具，一路next就好了</li>
-<li>下载并安装nodejs，记得勾选 add to path（这样的话就不要去电脑上配置环境变量了）</li>
-<li>安装hexo<br>&emsp;&emsp;可以使用git-bash进行安装,输入：npm  i -g hexo(==如果你是重新安装hexo,记得去/C/User/username/AppData中的Roaming文件夹中删除已经存在的npm、npm-chche文件夹，否则会报错==)<br><img src="/images/Blogs/second.png" alt="second"> </li>
-<li>初始化博客：可以选择在本地建一个空文件夹Blog,然后打开文件夹，右键选择git-bash，输入命令：hexo init,就会自动从git上克隆hexo到Blog文件夹</li>
-<li>Github仓库的创建：如果没有Gitthub账户，需要自己去创建一个，然后创建一个属于你博客的仓库，一般情况下仓库命名规则是：yourname.github.io;记得勾选一下这个：<br><img src="/images/Blogs/first.png" alt="first"> </li>
-<li>博客相关的配置：打开Blog文件夹下的_config.yml文件，最好使用notepade++进行编辑:<br>deploy:<br><br>&emsp;&emsp;type: git<br><br>&emsp;&emsp;repo: <a href="https://github.com/YourgithubName/YourgithubName.github.io.git" target="_blank" rel="noopener">https://github.com/YourgithubName/YourgithubName.github.io.git</a><br>&emsp;&emsp; branch: master </li>
-<li>ssh加密：借助git-bash，输入：==ssh-keygen -t rsa -C “<a href="mailto:youremail@example.com">youremail@example.com</a>==，然后可以去/C/User/Username/.ssh/id_rsa.pub中复制；然后去github中，找到Settings:<br><img src="/images/Blogs/third.png" alt="third">);<br>在Settings中进行如下操作：<br><img src="/images/Blogs/four.png" alt="four">)<br><img src="/images/Blogs/five.png" alt="five"></li>
-<li>推送以及部署博客：在Blog文件夹下使用git-bash执行：hexo clean;hexo g;hexo s;然后复制localhost:4000在浏览器打开，就可以看见博客的预览了。<br>如果要将本地博客推送到github上，还需要在git-bash上输入：npm install hexo-deployer-git –save，再执行以下命令:<br>&emsp;&emsp;hexo clean<br>&emsp;&emsp;hexo g<br>&emsp;&emsp;hexo d<br>至此，博客已经成功部署了，在浏览器输入:==yourname.github.io==,就可以看见你的博客了。</li>
-</ol>
+                <h1 id="我的博客总结"><a href="#我的博客总结" class="headerlink" title="我的博客总结"></a>我的博客总结<br></h1><h2 id="搭建博客的主要步骤"><a href="#搭建博客的主要步骤" class="headerlink" title="搭建博客的主要步骤"></a>搭建博客的主要步骤</h2><h3 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h3><p>&emsp;&emsp;<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git下载地址</a>,下载完成以后运行exe，一直next，不需要任何操作。</p>
+<h3 id="node-js的安装"><a href="#node-js的安装" class="headerlink" title="node.js的安装"></a>node.js的安装</h3><p>&emsp;&emsp;<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">node.js下载地址</a>,下载完成以后，运行exe，一直next，不过要在Custom Setup这一步勾选 add to path（这样的话就不要去电脑上配置环境变量了）</p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>&emsp;&emsp;可以使用git-bash进行安装,输入：npm  i -g hexo(如果你是重新安装hexo,记得去/C/User/username/AppData中的Roaming文件夹中删除已经存在的npm、npm-chche文件夹，否则会报错)<br><img src="/images/Blogs/second.png" alt="second"><br>4. 初始化博客：可以选择在本地建一个空文件夹Blog,然后打开文件夹，右键选择git-bash，输入命令：hexo init,就会自动从git上克隆hexo到Blog文件夹（也可以去git上克隆hexo<a href="https://github.com/hexojs/hexo-starter" target="_blank" rel="noopener">克隆地址</a>,下载以后，将解压后的文件放入Blog文件夹中就可以）</p>
+<h3 id="Github仓库的创建"><a href="#Github仓库的创建" class="headerlink" title="Github仓库的创建"></a>Github仓库的创建</h3><p>&emsp;&emsp;如果没有Gitthub账户，需要自己去创建一个，然后创建一个属于你博客的仓库，一般情况下仓库命名规则是:yourname.github.io;记得勾选一下这个：<br><img src="/images/Blogs/first.png" alt="first"> </p>
+<h3 id="博客相关的配置"><a href="#博客相关的配置" class="headerlink" title="博客相关的配置"></a>博客相关的配置</h3><p>&emsp;&emsp;打开Blog文件夹下的_config.yml文件，最好使用notepade++进行编辑:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">   type: git&lt;br&gt;</span><br><span class="line">   repo: https:&#x2F;&#x2F;github.com&#x2F;YourgithubName&#x2F;YourgithubName.github.io.git</span><br><span class="line">   branch: master</span><br></pre></td></tr></table></figure>
+<h3 id="ssh加密"><a href="#ssh加密" class="headerlink" title="ssh加密"></a>ssh加密</h3><p>&emsp;&emsp;借助git-bash，输入:<br><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code><br>然后可以去/C/User/Username/.ssh/id_rsa.pub中复制一下密钥；再去github中，找到Settings:<br><img src="/images/Blogs/third.png" alt="third"><br>在Settings中进行如下操作：<br><img src="/images/Blogs/four.png" alt="four">)<br><img src="/images/Blogs/five.png" alt="five"></p>
+<h3 id="推送以及部署博客："><a href="#推送以及部署博客：" class="headerlink" title="推送以及部署博客："></a>推送以及部署博客：</h3><p>&emsp;&emsp;在Blog文件夹下使用git-bash执行： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  </span><br><span class="line">hexo g  </span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后复制<code>：http://localhost:4000</code>在浏览器打开，就可以看见博客的预览了。<br>&emsp;&emsp;如果要将本地博客推送到github上，还需要在git-bash上输入：<code>npm install hexo-deployer-git --save</code>，再执行以下命令:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;至此，博客已经成功部署了，在浏览器输入:<code>yourname.github.io</code>,就可以看见你的博客了。</p>
 
             </div>
             <hr/>
@@ -596,10 +600,8 @@
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">我的博客总结搭建博客的主要步骤
-下载并安装Git工具，一路next就好了
-下载并安装nodejs，记得勾选 add to path（这样的话就不要去电脑上配置环境变量了）
-安装hexo&emsp;&emsp;可以使用git-bash进行安装</div>
+                    <div class="summary">我的博客总结搭建博客的主要步骤Git的安装&emsp;&emsp;Git下载地址,下载完成以后运行exe，一直next，不需要任何操作。
+node.js的安装&emsp;&emsp;node.js下载地址,下载完成以后，运行exe，一直ne</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-02
@@ -613,6 +615,14 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/" target="_blank">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
