@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 星空之下">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="搭建博客总结, 星空之下">
+    <meta name="description" content="我的博客总结搭建博客的主要步骤
+下载并安装Git工具，一路next就好了
+下载并安装nodejs，记得勾选 add to path（这样的话就不要去电脑上配置环境变量了）
+安装hexo&amp;emsp;&amp;emsp;可以使用git-bash进行安装">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | 星空之下</title>
+    <title>搭建博客总结 | 星空之下</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -282,13 +285,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        搭建博客总结
                     </div>
                 </div>
             </div>
@@ -407,19 +410,16 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h1 id="我的博客总结"><a href="#我的博客总结" class="headerlink" title="我的博客总结"></a>我的博客总结</h1><h2 id="搭建博客的主要步骤"><a href="#搭建博客的主要步骤" class="headerlink" title="搭建博客的主要步骤"></a>搭建博客的主要步骤</h2><ol>
+<li>下载并安装Git工具，一路next就好了</li>
+<li>下载并安装nodejs，记得勾选 add to path（这样的话就不要去电脑上配置环境变量了）</li>
+<li>安装hexo<br>&emsp;&emsp;可以使用git-bash进行安装,输入：npm  i -g hexo(==如果你是重新安装hexo,记得去/C/User/username/AppData中的Roaming文件夹中删除已经存在的npm、npm-chche文件夹，否则会报错==)<br><img src="/images/Blogs/second.png" alt="second"> </li>
+<li>初始化博客：可以选择在本地建一个空文件夹Blog,然后打开文件夹，右键选择git-bash，输入命令：hexo init,就会自动从git上克隆hexo到Blog文件夹</li>
+<li>Github仓库的创建：如果没有Gitthub账户，需要自己去创建一个，然后创建一个属于你博客的仓库，一般情况下仓库命名规则是：yourname.github.io;记得勾选一下这个：<br><img src="/images/Blogs/first.png" alt="first"> </li>
+<li>博客相关的配置：打开Blog文件夹下的_config.yml文件，最好使用notepade++进行编辑:<br>deploy:<br><br>&emsp;&emsp;type: git<br><br>&emsp;&emsp;repo: <a href="https://github.com/YourgithubName/YourgithubName.github.io.git" target="_blank" rel="noopener">https://github.com/YourgithubName/YourgithubName.github.io.git</a><br>&emsp;&emsp; branch: master </li>
+<li>ssh加密：借助git-bash，输入：==ssh-keygen -t rsa -C “<a href="mailto:youremail@example.com">youremail@example.com</a>==，然后可以去/C/User/Username/.ssh/id_rsa.pub中复制；然后去github中，找到Settings:<br><img src="/images/Blogs/third.png" alt="third">);<br>在Settings中进行如下操作：<br><img src="/images/Blogs/four.png" alt="four">)<br><img src="/images/Blogs/five.png" alt="five"></li>
+<li>推送以及部署博客：在Blog文件夹下使用git-bash执行：hexo clean;hexo g;hexo s;然后复制localhost:4000在浏览器打开，就可以看见博客的预览了。<br>如果要将本地博客推送到github上，还需要在git-bash上输入：npm install hexo-deployer-git –save，再执行以下命令:<br>&emsp;&emsp;hexo clean<br>&emsp;&emsp;hexo g<br>&emsp;&emsp;hexo d<br>至此，博客已经成功部署了，在浏览器输入:==yourname.github.io==,就可以看见你的博客了。</li>
+</ol>
 
             </div>
             <hr/>
@@ -560,7 +560,7 @@
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">星空之下</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2020/03/02/hello-world/" class="b-link-green">Hello World</a>
+                    <a href="/2020/03/02/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93/" class="b-link-green">搭建博客总结</a>
                 </p>
             </div>
         </div>
@@ -581,9 +581,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/03/02/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93/">
                     <div class="card-image">
@@ -600,9 +601,9 @@
 下载并安装nodejs，记得勾选 add to path（这样的话就不要去电脑上配置环境变量了）
 安装hexo&emsp;&emsp;可以使用git-bash进行安装</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -611,6 +612,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -618,7 +620,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/03/02/hello-world/">
@@ -644,7 +646,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
