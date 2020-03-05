@@ -4,9 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="搭建博客总结, 星空之下">
-    <meta name="description" content="我的博客总结搭建博客的主要步骤Git的安装&amp;emsp;&amp;emsp;Git下载地址,下载完成以后运行exe，一直next，不需要任何操作。
-node.js的安装&amp;emsp;&amp;emsp;node.js下载地址,下载完成以后，运行exe，一直ne">
+    <meta name="keywords" content="Java数据类型, 星空之下">
+    <meta name="description" content="Java数据类型Java常用数据类型三大数据类型&amp;emsp;&amp;emsp;字符类型char;布尔类型boolean;数值类型:byte,int,long,double,float,short.数值类型又可以分为：整形:int,short,lo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +13,7 @@ node.js的安装&amp;emsp;&amp;emsp;node.js下载地址,下载完成以后，运
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>搭建博客总结 | 星空之下</title>
+    <title>Java数据类型 | 星空之下</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -283,13 +282,13 @@ node.js的安装&amp;emsp;&amp;emsp;node.js下载地址,下载完成以后，运
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        搭建博客总结
+                        Java数据类型
                     </div>
                 </div>
             </div>
@@ -381,8 +380,8 @@ node.js的安装&amp;emsp;&amp;emsp;node.js下载地址,下载完成以后，运
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/" target="_blank">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/Java/" target="_blank">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
                     </div>
@@ -396,7 +395,7 @@ node.js的安装&amp;emsp;&amp;emsp;node.js下载地址,下载完成以后，运
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-02
+                    2020-03-05
                 </div>
 
                 
@@ -412,18 +411,87 @@ node.js的安装&amp;emsp;&amp;emsp;node.js下载地址,下载完成以后，运
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="我的博客总结"><a href="#我的博客总结" class="headerlink" title="我的博客总结"></a>我的博客总结<br></h1><h2 id="搭建博客的主要步骤"><a href="#搭建博客的主要步骤" class="headerlink" title="搭建博客的主要步骤"></a>搭建博客的主要步骤</h2><h3 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h3><p>&emsp;&emsp;<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git下载地址</a>,下载完成以后运行exe，一直next，不需要任何操作。</p>
-<h3 id="node-js的安装"><a href="#node-js的安装" class="headerlink" title="node.js的安装"></a>node.js的安装</h3><p>&emsp;&emsp;<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">node.js下载地址</a>,下载完成以后，运行exe，一直next，不过要在Custom Setup这一步勾选 add to path（这样的话就不要去电脑上配置环境变量了）</p>
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>&emsp;&emsp;可以使用git-bash进行安装,输入：npm  i -g hexo(如果你是重新安装hexo,记得去/C/User/username/AppData中的Roaming文件夹中删除已经存在的npm、npm-chche文件夹，否则会报错)<br><img src="/images/Blogs/second.png" alt="second"><br>4. 初始化博客：可以选择在本地建一个空文件夹Blog,然后打开文件夹，右键选择git-bash，输入命令：hexo init,就会自动从git上克隆hexo到Blog文件夹（也可以去git上克隆hexo<a href="https://github.com/hexojs/hexo-starter" target="_blank" rel="noopener">克隆地址</a>,下载以后，将解压后的文件放入Blog文件夹中就可以）</p>
-<h3 id="Github仓库的创建"><a href="#Github仓库的创建" class="headerlink" title="Github仓库的创建"></a>Github仓库的创建</h3><p>&emsp;&emsp;如果没有Gitthub账户，需要自己去创建一个，然后创建一个属于你博客的仓库，一般情况下仓库命名规则是:yourname.github.io;记得勾选一下这个：<br><img src="/images/Blogs/first.png" alt="first"> </p>
-<h3 id="博客相关的配置"><a href="#博客相关的配置" class="headerlink" title="博客相关的配置"></a>博客相关的配置</h3><p>&emsp;&emsp;打开Blog文件夹下的_config.yml文件，最好使用notepade++进行编辑:  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">   type: git&lt;br&gt;</span><br><span class="line">   repo: https:&#x2F;&#x2F;github.com&#x2F;YourgithubName&#x2F;YourgithubName.github.io.git</span><br><span class="line">   branch: master</span><br></pre></td></tr></table></figure>
-<h3 id="ssh加密"><a href="#ssh加密" class="headerlink" title="ssh加密"></a>ssh加密</h3><p>&emsp;&emsp;借助git-bash，输入:<br><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code><br>然后可以去/C/User/Username/.ssh/id_rsa.pub中复制一下密钥；再去github中，找到Settings:<br><img src="/images/Blogs/third.png" alt="third"><br>在Settings中进行如下操作：<br><img src="/images/Blogs/four.png" alt="four">)<br><img src="/images/Blogs/five.png" alt="five"></p>
-<h3 id="推送以及部署博客："><a href="#推送以及部署博客：" class="headerlink" title="推送以及部署博客："></a>推送以及部署博客：</h3><p>&emsp;&emsp;在Blog文件夹下使用git-bash执行： </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  </span><br><span class="line">hexo g  </span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;然后复制<code>：http://localhost:4000</code>在浏览器打开，就可以看见博客的预览了。<br>&emsp;&emsp;如果要将本地博客推送到github上，还需要在git-bash上输入：<code>npm install hexo-deployer-git --save</code>，再执行以下命令:  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;至此，博客已经成功部署了，在浏览器输入:<code>yourname.github.io</code>,就可以看见你的博客了。</p>
+                <h1 id="Java数据类型"><a href="#Java数据类型" class="headerlink" title="Java数据类型"></a>Java数据类型</h1><h2 id="Java常用数据类型"><a href="#Java常用数据类型" class="headerlink" title="Java常用数据类型"></a>Java常用数据类型</h2><h3 id="三大数据类型"><a href="#三大数据类型" class="headerlink" title="三大数据类型"></a>三大数据类型</h3><p>&emsp;&emsp;字符类型char;布尔类型boolean;数值类型:byte,int,long,double,float,short.数值类型又可以分为：整形:int,short,long,byte;浮点型:float,double.</p>
+<h3 id="数据类型的表示范围"><a href="#数据类型的表示范围" class="headerlink" title="数据类型的表示范围"></a>数据类型的表示范围</h3><table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>二进制位</th>
+<th>取值范围</th>
+<th>封装器</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>8位</td>
+<td>-128~127</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>short</td>
+<td>16位</td>
+<td>-32768~32767</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>int</td>
+<td>32位</td>
+<td>负的2的31次方到正的2的31次方减1</td>
+<td></td>
+</tr>
+<tr>
+<td>long</td>
+<td>64位</td>
+<td>数据范围为负的2的63次方到正的2的63次方减1</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>double</td>
+<td>64位</td>
+<td>4.9e-324~1.8e308</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>float</td>
+<td>32位</td>
+<td>3.4e-45~1.4e38</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>1位</td>
+<td>true/false</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>char</td>
+<td>16位</td>
+<td>存储Unicode码，用单引号赋值</td>
+<td>Character</td>
+</tr>
+<tr>
+<td>void</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="变量的声明以及使用"><a href="#变量的声明以及使用" class="headerlink" title="变量的声明以及使用"></a>变量的声明以及使用</h2><p>&emsp;&emsp;声明，赋值，再使用  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String [] args)&#123;</span><br><span class="line">    String name;</span><br><span class="line">    System.out.print(name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这一段代码编译就会通过不了，因为仅仅声明了变量，没有为变量赋值。</p>
+<h2 id="变量命名规则"><a href="#变量命名规则" class="headerlink" title="变量命名规则"></a>变量命名规则</h2><p>&emsp;&emsp;首字母可以是：字母、下划线、美元符号；其余部分可以是：任意多的：数字、字母、下划线、美元符号.</p>
+<h2 id="变量命名规范"><a href="#变量命名规范" class="headerlink" title="变量命名规范"></a>变量命名规范</h2><p>&emsp;&emsp;简洁且等清楚地表达变量的作用，通常第一个单词的首字母小写，其余单词首字母大写。例如：<code>myScore</code></p>
+<h2 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h2><p>&emsp;&emsp;<strong>规则一：</strong><br>&emsp;&emsp;如果有一个操作数为long型，则计算结果为long型；如果一个操作书为float类型，则计算结果为float类型如果一个操作数为double型，则计算结果为double类型<br>&emsp;&emsp;<strong>规则二：满足自动转换类型的条件</strong> :<br>&emsp;&emsp;俩种类型要兼容:数字类型(整形和浮点型)互相兼容<br>目标类型要大于原型：类型由”小”到”大”分别为 (byte，short，char)–int–long–float—double<br>&emsp;&emsp;<strong>规则三：字符串与其他类型之间的转换</strong><br>&emsp;&emsp;<em>其他类型向字符串转换</em>  </p>
+<ol>
+<li>调用类的串转换方法:X.toString();</li>
+<li>自动转换:X+””;</li>
+<li>使用String的方法:String.volueOf(X);  </li>
+</ol>
+<p><em>字符串转换成其他类型</em><br>&emsp;&emsp;1.先转换成相应的封装器实例,再调用对应的方法转换成其它类型,eg:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String s&#x3D;&quot;3.21&quot;;</span><br><span class="line"></span><br><span class="line">double d&#x3D;new Float(&quot;3.21&quot;).doubleValue() </span><br><span class="line">double e&#x3D;new Double(&quot;3.21&quot;).doubleValue()</span><br></pre></td></tr></table></figure>
+<p>2.静态parseXXX方法,eg:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">String s &#x3D; &quot;1&quot;;</span><br><span class="line"></span><br><span class="line">byte b &#x3D; Byte.parseByte( s );</span><br><span class="line"></span><br><span class="line">short t &#x3D; Short.parseShort( s );</span><br><span class="line"></span><br><span class="line">int i &#x3D; Integer.parseInt( s );</span><br><span class="line"></span><br><span class="line">long l &#x3D; Long.parseLong( s );</span><br><span class="line"></span><br><span class="line">Float f &#x3D; Float.parseFloat( s );</span><br><span class="line"></span><br><span class="line">Double d &#x3D; Double.parseDouble( s );</span><br><span class="line">&#96;&#96;&#96;   </span><br><span class="line">3.Character的getNumericValue(char ch)方法  </span><br><span class="line">&amp;emsp;&amp;emsp;**规则四：Date类与其它数据类型的相互转换**  </span><br><span class="line">&amp;emsp;&amp;emsp;整型和Date类之间并不存在直接的对应关系，只是你可以使用int型为分别表示年、月、日、时、分、秒，这样就在两者之间建立了一个对应关系，在作这种转换时，你可以使用Date类构造函数的三种形式：</span><br><span class="line"></span><br><span class="line">①&#96;Date(int year, int month, int date)&#96;：以int型表示年、月、日  </span><br><span class="line">②&#96;Date(int year, int month, int date, int hrs, int min)&#96;：以int型表示年、月、日、时、分  </span><br><span class="line">③&#96;Date(int year, int month, int date, int hrs, int min, int sec)&#96;：以int型表示年、月、日、时、分、秒  </span><br><span class="line">&amp;emsp;&amp;emsp;在长整型和Date类之间有一个很有趣的对应关系，就是将一个时间表示为距离格林尼治标准时间1970年1月1日0时0分0秒的毫秒数。对于这种对应关系，Date类也有其相应的构造函数：&#96;Date(long date)&#96;.  </span><br><span class="line">&amp;emsp;&amp;emsp;获取Date类中的年、月、日、时、分、秒以及星期你可以使用Date类的&#96;getYear()、getMonth()、getDate()、getHours()、getMinutes()、getSeconds()、getDay()&#96;方法，你也可以将其理解为将Date类转换成int.  </span><br><span class="line">&amp;emsp;&amp;emsp;而Date类的getTime()方法可以得到我们前面所说的一个时间对应的长整型数，与包装类一样，Date类也有一个toString()方法可以将其转换为String类</span><br><span class="line">## 运算符  </span><br><span class="line">### 常用关系运算符</span><br><span class="line">&gt;,&lt;,&#x3D;&#x3D;,!&#x3D;,&gt;&#x3D;,&lt;&#x3D;  </span><br><span class="line">### 赋值运算符   </span><br><span class="line">&#x3D;   </span><br><span class="line">### 算数运算符  </span><br><span class="line">+，-，*，&#x2F;，%</span><br><span class="line">## 运算符的优先级  </span><br><span class="line">&amp;emsp;&amp;emsp;最高优先级：小括号()  </span><br><span class="line">&amp;emsp;&amp;emsp;最低优先级：赋值运算符，即&#x3D;  </span><br><span class="line">&amp;emsp;&amp;emsp;优先级顺序:算数运算符&gt;关系运算符&gt;逻辑运算符</span><br><span class="line">## Scanner类</span><br></pre></td></tr></table></figure>
+<p>Scanner s=new Scanner(System.in);<br>int a=s.nextInt();<br>String b=s.next();<br>long c=s.nextLong();<br>loat e=s.nextFloat();<br>double f=s.nextDouble();<br>short g=s.nextShort();<br>boolean h=s.hasNext();<br>```</p>
 
             </div>
             <hr/>
@@ -564,7 +632,7 @@ node.js的安装&amp;emsp;&amp;emsp;node.js下载地址,下载完成以后，运
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">星空之下</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2020/03/02/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93/" class="b-link-green">搭建博客总结</a>
+                    <a href="/2020/03/05/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="b-link-green">Java数据类型</a>
                 </p>
             </div>
         </div>
@@ -585,9 +653,10 @@ node.js的安装&amp;emsp;&amp;emsp;node.js下载地址,下载完成以后，运
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/03/05/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
                     <div class="card-image">
@@ -601,9 +670,9 @@ node.js的安装&amp;emsp;&amp;emsp;node.js下载地址,下载完成以后，运
                 <div class="card-content article-content">
                     <div class="summary">Java数据类型Java常用数据类型三大数据类型&emsp;&emsp;字符类型char;布尔类型boolean;数值类型:byte,int,long,double,float,short.数值类型又可以分为：整形:int,short,lo</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -612,6 +681,7 @@ node.js的安装&amp;emsp;&amp;emsp;node.js下载地址,下载完成以后，运
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -627,7 +697,7 @@ node.js的安装&amp;emsp;&amp;emsp;node.js下载地址,下载完成以后，运
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/03/02/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93/">
@@ -654,7 +724,6 @@ node.js的安装&emsp;&emsp;node.js下载地址,下载完成以后，运行exe�
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
