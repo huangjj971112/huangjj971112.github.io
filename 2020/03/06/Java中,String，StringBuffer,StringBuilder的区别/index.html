@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java数据类型, 星空之下">
-    <meta name="description" content="Java数据类型Java常用数据类型三大数据类型&amp;emsp;&amp;emsp;字符类型char;布尔类型boolean;数值类型:byte,int,long,double,float,short.数值类型又可以分为：整形:int,short,lo">
+    <meta name="keywords" content="Java中,String，StringBuffer,StringBuilder的区别, 星空之下">
+    <meta name="description" content="&amp;emsp;&amp;emsp;String,StringBuffer,StringBuilder都是Java编程以及面试中会用到的知识点，所以闲来无事就总结一下吧：&amp;emsp;&amp;emsp;String是字符数组保存字符串，如下是String的源码">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java数据类型 | 星空之下</title>
+    <title>Java中,String，StringBuffer,StringBuilder的区别 | 星空之下</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -282,13 +282,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Java数据类型
+                        Java中,String，StringBuffer,StringBuilder的区别
                     </div>
                 </div>
             </div>
@@ -395,7 +395,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-05
+                    2020-03-06
                 </div>
 
                 
@@ -411,95 +411,12 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Java数据类型"><a href="#Java数据类型" class="headerlink" title="Java数据类型"></a>Java数据类型</h1><h2 id="Java常用数据类型"><a href="#Java常用数据类型" class="headerlink" title="Java常用数据类型"></a>Java常用数据类型</h2><h3 id="三大数据类型"><a href="#三大数据类型" class="headerlink" title="三大数据类型"></a>三大数据类型</h3><p>&emsp;&emsp;字符类型char;布尔类型boolean;数值类型:byte,int,long,double,float,short.数值类型又可以分为：整形:int,short,long,byte;浮点型:float,double.</p>
-<h3 id="数据类型的表示范围"><a href="#数据类型的表示范围" class="headerlink" title="数据类型的表示范围"></a>数据类型的表示范围</h3><table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>二进制位</th>
-<th>取值范围</th>
-<th>封装器</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>byte</td>
-<td>8位</td>
-<td>-128~127</td>
-<td>Byte</td>
-</tr>
-<tr>
-<td>short</td>
-<td>16位</td>
-<td>-32768~32767</td>
-<td>Short</td>
-</tr>
-<tr>
-<td>int</td>
-<td>32位</td>
-<td>负的2的31次方到正的2的31次方减1</td>
-<td></td>
-</tr>
-<tr>
-<td>long</td>
-<td>64位</td>
-<td>数据范围为负的2的63次方到正的2的63次方减1</td>
-<td>Long</td>
-</tr>
-<tr>
-<td>double</td>
-<td>64位</td>
-<td>4.9e-324~1.8e308</td>
-<td>Double</td>
-</tr>
-<tr>
-<td>float</td>
-<td>32位</td>
-<td>3.4e-45~1.4e38</td>
-<td></td>
-</tr>
-<tr>
-<td>boolean</td>
-<td>1位</td>
-<td>true/false</td>
-<td>Boolean</td>
-</tr>
-<tr>
-<td>char</td>
-<td>16位</td>
-<td>存储Unicode码，用单引号赋值</td>
-<td>Character</td>
-</tr>
-<tr>
-<td>void</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="变量的声明以及使用"><a href="#变量的声明以及使用" class="headerlink" title="变量的声明以及使用"></a>变量的声明以及使用</h2><p>&emsp;&emsp;声明，赋值，再使用  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String [] args)&#123;</span><br><span class="line">    String name;</span><br><span class="line">    System.out.print(name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;这一段代码编译就会通过不了，因为仅仅声明了变量，没有为变量赋值。</p>
-<h2 id="变量命名规则"><a href="#变量命名规则" class="headerlink" title="变量命名规则"></a>变量命名规则</h2><p>&emsp;&emsp;首字母可以是：字母、下划线、美元符号；其余部分可以是：任意多的：数字、字母、下划线、美元符号.</p>
-<h2 id="变量命名规范"><a href="#变量命名规范" class="headerlink" title="变量命名规范"></a>变量命名规范</h2><p>&emsp;&emsp;简洁且等清楚地表达变量的作用，通常第一个单词的首字母小写，其余单词首字母大写。例如：<code>myScore</code></p>
-<h2 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h2><p>&emsp;&emsp;<strong>规则一：</strong><br>&emsp;&emsp;如果有一个操作数为long型，则计算结果为long型；如果一个操作书为float类型，则计算结果为float类型如果一个操作数为double型，则计算结果为double类型<br>&emsp;&emsp;<strong>规则二：满足自动转换类型的条件</strong> :<br>&emsp;&emsp;俩种类型要兼容:数字类型(整形和浮点型)互相兼容<br>目标类型要大于原型：类型由”小”到”大”分别为 (byte，short，char)–int–long–float—double<br>&emsp;&emsp;<strong>规则三：字符串与其他类型之间的转换</strong><br>&emsp;&emsp;<em>其他类型向字符串转换</em>  </p>
-<ol>
-<li>调用类的串转换方法:X.toString();</li>
-<li>自动转换:X+””;</li>
-<li>使用String的方法:String.volueOf(X);  </li>
-</ol>
-<p><em>字符串转换成其他类型</em><br>&emsp;&emsp;1.先转换成相应的封装器实例,再调用对应的方法转换成其它类型,eg:  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String s&#x3D;&quot;3.21&quot;;</span><br><span class="line"></span><br><span class="line">double d&#x3D;new Float(&quot;3.21&quot;).doubleValue() </span><br><span class="line">double e&#x3D;new Double(&quot;3.21&quot;).doubleValue()</span><br></pre></td></tr></table></figure>
-<p>2.静态parseXXX方法,eg:  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String s &#x3D; &quot;1&quot;;</span><br><span class="line">byte b &#x3D; Byte.parseByte( s );</span><br><span class="line">short t &#x3D; Short.parseShort( s );&#x2F;&#x2F;以此类推</span><br><span class="line">long l &#x3D; Long.parseLong( s );</span><br><span class="line">Float f &#x3D; Float.parseFloat( s );</span><br><span class="line">Double d &#x3D; Double.parseDouble( s );</span><br></pre></td></tr></table></figure>
-<p>3.Character的getNumericValue(char ch)方法<br>&emsp;&emsp;<strong>规则四：Date类与其它数据类型的相互转换</strong><br>&emsp;&emsp;整型和Date类之间并不存在直接的对应关系，只是你可以使用int型为分别表示年、月、日、时、分、秒，这样就在两者之间建立了一个对应关系，在作这种转换时，你可以使用Date类构造函数的三种形式：</p>
-<p>①<code>Date(int year, int month, int date)</code>：以int型表示年、月、日<br>②<code>Date(int year, int month, int date, int hrs, int min)</code>：以int型表示年、月、日、时、分<br>③<code>Date(int year, int month, int date, int hrs, int min, int sec)</code>：以int型表示年、月、日、时、分、秒<br>&emsp;&emsp;在长整型和Date类之间有一个很有趣的对应关系，就是将一个时间表示为距离格林尼治标准时间1970年1月1日0时0分0秒的毫秒数。对于这种对应关系，Date类也有其相应的构造函数：<code>Date(long date)</code>.<br>&emsp;&emsp;获取Date类中的年、月、日、时、分、秒以及星期你可以使用Date类的<code>getYear()、getMonth()、getDate()、getHours()、getMinutes()、getSeconds()、getDay()</code>方法，你也可以将其理解为将Date类转换成int.<br>&emsp;&emsp;而Date类的getTime()方法可以得到我们前面所说的一个时间对应的长整型数，与包装类一样，Date类也有一个toString()方法可以将其转换为String类</p>
-<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="常用关系运算符"><a href="#常用关系运算符" class="headerlink" title="常用关系运算符"></a>常用关系运算符</h3><blockquote>
-<p>,&lt;,==,!=,&gt;=,&lt;=  </p>
-</blockquote>
-<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><p>=   </p>
-<h3 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h3><p>+，-，*，/，%</p>
-<h2 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h2><p>&emsp;&emsp;最高优先级：小括号()<br>&emsp;&emsp;最低优先级：赋值运算符，即=<br>&emsp;&emsp;优先级顺序:算数运算符&gt;关系运算符&gt;逻辑运算符</p>
-<h2 id="Scanner类"><a href="#Scanner类" class="headerlink" title="Scanner类"></a>Scanner类</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Scanner s&#x3D;new Scanner(System.in);</span><br><span class="line">int a&#x3D;s.nextInt();</span><br><span class="line">String b&#x3D;s.next();</span><br><span class="line">long c&#x3D;s.nextLong();</span><br><span class="line">loat e&#x3D;s.nextFloat();</span><br><span class="line">double f&#x3D;s.nextDouble();</span><br><span class="line">short g&#x3D;s.nextShort();</span><br><span class="line">boolean h&#x3D;s.hasNext();</span><br></pre></td></tr></table></figure>
+                <p>&emsp;&emsp;String,StringBuffer,StringBuilder都是Java编程以及面试中会用到的知识点，所以闲来无事就总结一下吧：<br>&emsp;&emsp;<strong>String</strong>是字符数组保存字符串，如下是String的源码:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public final class String  extends Object  implements  </span><br><span class="line">Serializable,Comparable&lt;String&gt;, CharSequence</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;由此可见:String字符串一旦被赋值就不可被改变，如果真的要改变只能重新开辟新的存储空间。所以String也是线程安全的。<br>&emsp;&emsp;StringBuffer类是可变的,StringBuffer对方法加了同步锁或者对调用的方法加了同步锁，所以是线程安全的，如下是源码:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public synchronized StringBuffer reverse() &#123;</span><br><span class="line">2     super.reverse();</span><br><span class="line">3     return this;</span><br><span class="line">4 &#125;</span><br><span class="line">5 </span><br><span class="line">6 public int indexOf(String str) &#123;</span><br><span class="line">7     return indexOf(str, 0);  </span><br><span class="line">&#x2F;&#x2F;存在 public synchronized int indexOf(String str, int fromIndex) 方法</span><br><span class="line">8 &#125;</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;StringBuilder类和StringBuffer一样可变，StringBuilder并没有对方法进行加同步锁，所以是非线程安全的。<br>StringBuilder和StringBuffer的共同点:<br>&emsp;&emsp;StringBuffer和StringBuilderd的父类都是AbstractStringBuilder(抽象类)，StringBuffer和StringBuilder都可以调用AbstractStringBuilder的方法.<code>append(),.insert().</code><br>&emsp;&emsp;抽象类与接口的其中一个区别是：抽象类中可以定义一些子类的公共方法，子类只需要增加新的功能，不需要重复写已经存在的方法；而接口中只是对方法的申明和常量的定义。  </p>
+
             </div>
             <hr/>
 
@@ -639,7 +556,7 @@
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">星空之下</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2020/03/05/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="b-link-green">Java数据类型</a>
+                    <a href="/2020/03/06/Java%E4%B8%AD,String%EF%BC%8CStringBuffer,StringBuilder%E7%9A%84%E5%8C%BA%E5%88%AB/" class="b-link-green">Java中,String，StringBuffer,StringBuilder的区别</a>
                 </p>
             </div>
         </div>
@@ -660,9 +577,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/03/06/Java%E4%B8%AD,String%EF%BC%8CStringBuffer,StringBuilder%E7%9A%84%E5%8C%BA%E5%88%AB/">
                     <div class="card-image">
@@ -676,9 +594,9 @@
                 <div class="card-content article-content">
                     <div class="summary">&emsp;&emsp;String,StringBuffer,StringBuilder都是Java编程以及面试中会用到的知识点，所以闲来无事就总结一下吧：&emsp;&emsp;String是字符数组保存字符串，如下是String的源码</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -687,6 +605,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -705,21 +624,20 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/02/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93/">
+                <a href="/2020/03/05/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="搭建博客总结">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java数据类型">
                         
-                        <span class="card-title">搭建博客总结</span>
+                        <span class="card-title">Java数据类型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">我的博客总结搭建博客的主要步骤Git的安装&emsp;&emsp;Git下载地址,下载完成以后运行exe，一直next，不需要任何操作。
-node.js的安装&emsp;&emsp;node.js下载地址,下载完成以后，运行exe，一直ne</div>
+                    <div class="summary">Java数据类型Java常用数据类型三大数据类型&emsp;&emsp;字符类型char;布尔类型boolean;数值类型:byte,int,long,double,float,short.数值类型又可以分为：整形:int,short,lo</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-02
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-05
                             </span>
                         <span class="publish-author">
                             
@@ -732,8 +650,8 @@ node.js的安装&emsp;&emsp;node.js下载地址,下载完成以后，运行exe�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/" target="_blank">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
