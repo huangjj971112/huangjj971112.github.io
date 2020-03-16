@@ -398,7 +398,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-14
+                    2020-03-16
                 </div>
 
                 
@@ -427,13 +427,13 @@
 <p>&emsp;&emsp;egs:  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">insert into test01</span><br><span class="line">(id,name) values</span><br><span class="line">(1,&quot;huangjj&quot;),</span><br><span class="line">(2,&quot;nacy&quot;);</span><br></pre></td></tr></table></figure>
 <h2 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h2><p>&emsp;&emsp;查询数据表中所有数据:<br><code>select * from [table-name]</code><br>&emsp;&emsp;查询某列数据:<br><code>select [column-name],[column-nname] from [table-name];</code><br>&emsp;&emsp;条件查询：<br><code>select [column-name],[column-name] from [table-name] where [queryCondition]</code><br>&emsp;&emsp;egs:<code>select id,name from test01 where id=1;</code></p>
-<h2 id="update更新数据表"><a href="#update更新数据表" class="headerlink" title="update更新数据表"></a>update更新数据表</h2><p><code>update [table] set filed01=newvalue, filed02=newvalue  where [update-condition];</code><br>&emsp;&emsp;egs:<br><code>update test01 set name=&quot;hello&quot; where id=1;</code></p>
+<h2 id="update更新数据表"><a href="#update更新数据表" class="headerlink" title="update更新数据表"></a>update更新数据表</h2><p><code>update [table-name] set filed01=newvalue, filed02=newvalue  where [update-condition];</code><br>&emsp;&emsp;egs:<br><code>update test01 set name=&quot;hello&quot; where id=1;</code></p>
 <h2 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h2><p><code>delete from [table-name] where [condition];\\如果没有where条件，整个数据表都会被删除</code></p>
 <h2 id="like语句"><a href="#like语句" class="headerlink" title="like语句"></a>like语句</h2><p>&emsp;&emsp;在mysql数据表的查询中，有时候我们需要查寻某列的属性值中包含有某个字符串的数据，这时候like就可以派上用场了，在like中“%”表示任意字符。如果在like语句中没有使用“%”，就等同于“=”了。下面是like语句的使用:<br><code>select filed01,filed02 from [table-name] where filed02 like %c;</code><br>&emsp;&emsp;egs:<br><code>select id from test01 where name like &#39;%c%&#39;;//查询test01表中name中包含c的id</code></p>
 <h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>&emsp;&emsp;mysql中的排序使用order by,其中asc代表增序，desc代表降序；默认增序排列。<br><code>select field1, field2, from [table-name]
 order by field1 [asc [desc];</code><br>&emsp;&emsp;egs:<br><code>select id,name from test01 order by id desc;</code></p>
 <h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><p><code>select filed01,filed02 from [table-name] group by filed01;</code><br>&emsp;&emsp;egs:<br><code>select id,name ,count(name) from test01 group by name;//count()函数用于计算同一个name属性值出现了几次</code></p>
-<h2 id="查看数据表字段"><a href="#查看数据表字段" class="headerlink" title="查看数据表字段"></a>查看数据表字段</h2><p><code>select columns from [table-name];</code></p>
+<h2 id="查看数据表字段"><a href="#查看数据表字段" class="headerlink" title="查看数据表字段"></a>查看数据表字段</h2><p><code>show columns from [table-name];</code></p>
 <h2 id="ALTER修改"><a href="#ALTER修改" class="headerlink" title="ALTER修改"></a>ALTER修改</h2><p>&emsp;&emsp;alter主要用来删除、修改或者添加表的字段，总的来说就是对数据表进行操作。  </p>
 <h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p><code>alter table [table-name] drop [column-name];</code></p>
 <h3 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h3><p><code>alter table [table-name] add colune-name type;</code><br>&emsp;&emsp;eg:  </p>
@@ -579,7 +579,7 @@ order by field1 [asc [desc];</code><br>&emsp;&emsp;egs:<br><code>select id,name 
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">星空之下</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2020/03/14/Mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E5%8F%A5/" class="b-link-green">Mysql常用语句</a>
+                    <a href="/2020/03/16/Mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E5%8F%A5/" class="b-link-green">Mysql常用语句</a>
                 </p>
             </div>
         </div>
@@ -600,29 +600,25 @@ order by field1 [asc [desc];</code><br>&emsp;&emsp;egs:<br><code>select id,name 
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/14/Mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E5%8F%A5/">
+                <a href="/2020/03/16/Ecplise%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E8%A1%8C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Mysql常用语句">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Ecplise打开终端命令行">
                         
-                        <span class="card-title">Mysql常用语句</span>
+                        <span class="card-title">Ecplise打开终端命令行</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">&emsp;&emsp;所有的mysql语句都必须以“;”结束。  
-查看所有数据库show databases;  
-创建数据库create database [databasde-name];  
-删除数据库drop database </div>
+                    <div class="summary">&emsp;&emsp;今天在学习Spring的时候，看Spring文档上说可以在IDEA上输入maven命令，对项目进行管理。而我只知道IDEA Intelij的终端命令在哪，对于ecplise的却不知道，所以就记录一下吧。&emsp;&</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-14
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-16
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -631,12 +627,11 @@ order by field1 [asc [desc];</code><br>&emsp;&emsp;egs:<br><code>select id,name 
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/MySql/" target="_blank">
-                        <span class="chip bg-color">MySql</span>
+                    <a href="/tags/Ecplise/" target="_blank">
+                        <span class="chip bg-color">Ecplise</span>
                     </a>
                     
                 </div>
