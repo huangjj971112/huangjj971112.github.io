@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="inner join和outer join的区别, 星空之下">
-    <meta name="description" content="&amp;emsp;&amp;emsp;今天在网上刷题，看见有关inner join和区别的选择题。就记录一下吧。&amp;emsp;&amp;emsp;有如下俩个表格，这两个表没有相同的列这是这俩个表可以连接的前提。分别是bank,test01。&amp;emsp;&amp;emsp;">
+    <meta name="keywords" content="Mysql临时表, 星空之下">
+    <meta name="description" content="&amp;emsp;&amp;emsp;MySQL临时表在我们需要保存一些临时数据时是非常有用的。临时表只在当前连接可见，当关闭连接时，Mysql会自动删除表并释放所有空间。  
+建表语句CREATE TEMPORARY TABLE 表名&amp;emsp;&amp;em">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>inner join和outer join的区别 | 星空之下</title>
+    <title>Mysql临时表 | 星空之下</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -282,13 +283,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        inner join和outer join的区别
+                        Mysql临时表
                     </div>
                 </div>
             </div>
@@ -395,7 +396,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-25
+                    2020-04-16
                 </div>
 
                 
@@ -411,8 +412,9 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>&emsp;&emsp;今天在网上刷题，看见有关inner join和区别的选择题。就记录一下吧。<br>&emsp;&emsp;有如下俩个表格，这两个表没有相同的列这是这俩个表可以连接的前提。分别是bank,test01。<br>&emsp;&emsp;<img src="/images/Blogs/Java/mysql2.png" alt="bank"><br>&emsp;&emsp;<img src="/images/Blogs/Java/mysql1.png" alt="test01"><br>&emsp;&emsp;inner  join把两个表连接在一起，返回两个表中相匹配的记录。sql语句及运行结果如下图所示:<br><code>SELECT checking,name FROM bank INNER JOIN test01 on bankid=id;</code>  </p>
-<p> &emsp;&emsp;<img src="/images/Blogs/Java/inner1.png" alt="result"><br>&emsp;&emsp;outer join是将两个表所有记录都返回,通常外连分为left join(左连接)、right join(右链接)。<br>&emsp;&emsp;left join是将左侧的记录都返回，右侧与左侧相同的记录返回。<br><code>SELECT checking,name FROM bank LEFT OUTER JOIN test01 on bankid=id;</code><br>&emsp;&emsp;<img src="/images/Blogs/Java/outer1.png" alt="result2"><br>&emsp;&emsp;right join是将右侧的记录都返回，右侧与左侧相同的记录返回。sql语句及运行结果如下图所示:<br><code>SELECT checking,name FROM bank RIGHT  OUTER JOIN test01 on bankid=id;</code><br>&emsp;&emsp;<img src="/images/Blogs/Java/outer2.png" alt="result3"></p>
+                <p>&emsp;&emsp;MySQL临时表在我们需要保存一些临时数据时是非常有用的。临时表只在当前连接可见，当关闭连接时，Mysql会自动删除表并释放所有空间。  </p>
+<h2 id="建表语句"><a href="#建表语句" class="headerlink" title="建表语句"></a>建表语句</h2><p><code>CREATE TEMPORARY TABLE 表名</code><br>&emsp;&emsp;临时表不可以通过<code>SHOW TABLES</code>查看；临时表的其他一些操作语言与mysql语句一样。  </p>
+<h2 id="删除临时表"><a href="#删除临时表" class="headerlink" title="删除临时表"></a>删除临时表</h2><p>&emsp;&emsp;默认情况下，当您自己与数据库的连接后，临时表就会自动被销毁。<br><code>drop table 表名</code>  </p>
 
             </div>
             <hr/>
@@ -553,7 +555,7 @@
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">星空之下</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2020/03/25/inner%20join%E5%92%8Couter%20join%E7%9A%84%E5%8C%BA%E5%88%AB/" class="b-link-green">inner join和outer join的区别</a>
+                    <a href="/2020/04/16/Mysql%E4%B8%B4%E6%97%B6%E8%A1%A8/" class="b-link-green">Mysql临时表</a>
                 </p>
             </div>
         </div>
@@ -574,9 +576,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/04/16/Mysql%E4%B8%B4%E6%97%B6%E8%A1%A8/">
                     <div class="card-image">
@@ -591,9 +594,9 @@
                     <div class="summary">&emsp;&emsp;MySQL临时表在我们需要保存一些临时数据时是非常有用的。临时表只在当前连接可见，当关闭连接时，Mysql会自动删除表并释放所有空间。  
 建表语句CREATE TEMPORARY TABLE 表名&emsp;&em</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -602,6 +605,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -620,17 +624,17 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/25/%E9%87%8D%E5%86%99%E5%92%8C%E9%87%8D%E8%BD%BD/">
+                <a href="/2020/03/25/inner%20join%E5%92%8Couter%20join%E7%9A%84%E5%8C%BA%E5%88%AB/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="重写和重载">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="inner join和outer join的区别">
                         
-                        <span class="card-title">重写和重载</span>
+                        <span class="card-title">inner join和outer join的区别</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">&emsp;&emsp;重写是方法名的返回类型以及形参、方法名必须保持一致，重写一般发生在父类和子类之间，子类可以重写父类的方法。&emsp;&emsp;重载是返回类型可以不一致值；形参也必须不一样；方法名必须一致。重载一般发生在一个类中，</div>
+                    <div class="summary">&emsp;&emsp;今天在网上刷题，看见有关inner join和区别的选择题。就记录一下吧。&emsp;&emsp;有如下俩个表格，这两个表没有相同的列这是这俩个表可以连接的前提。分别是bank,test01。&emsp;&emsp;</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-25
@@ -646,8 +650,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/MySql/" target="_blank">
+                        <span class="chip bg-color">MySql</span>
                     </a>
                     
                 </div>
