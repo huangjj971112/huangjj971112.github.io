@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="在命令行中运行java程序, 星空之下">
-    <meta name="description" content="&amp;emsp;&amp;emsp;从大一开始学习java，一直都是用ecplise、intelij这些编译软件写程序，没有用过文本去写过代码，到现在都不知道如何使用cmd运行java程序，经过去网上百度，现在会了，所以记录一下吧。&amp;emsp;&amp;ems">
+    <meta name="keywords" content="多线程, 星空之下">
+    <meta name="description" content="序言&amp;emsp;&amp;emsp;大学学过多线程，当时仅仅是为了考试而学，考完试自然也就忘得一干二净了，现在工作面试中，经常被问道关于多线程的问题，却啥也不知道，所以现在开始重新学习吧！  
+多线程的概念进程：进程是程序在操作系统上运行的过程，它">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>在命令行中运行java程序 | 星空之下</title>
+    <title>多线程 | 星空之下</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -288,7 +289,7 @@
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        在命令行中运行java程序
+                        多线程
                     </div>
                 </div>
             </div>
@@ -395,7 +396,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-26
+                    2020-06-08
                 </div>
 
                 
@@ -411,9 +412,33 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>&emsp;&emsp;从大一开始学习java，一直都是用ecplise、intelij这些编译软件写程序，没有用过文本去写过代码，到现在都不知道如何使用cmd运行java程序，经过去网上百度，现在会了，所以记录一下吧。<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——序言  </p>
-<h2 id="使用cmd运行java程序的步骤"><a href="#使用cmd运行java程序的步骤" class="headerlink" title="使用cmd运行java程序的步骤"></a>使用cmd运行java程序的步骤</h2><p>&emsp;&emsp;1.首先在F盘建一个名为“StudyJava”的文件夹，在里面放入我们写好的Java程序，记得程序的文件名要和类名保持一致。<br>&emsp;&emsp;2.通过win+R打开cmd命令面板，先进入Java文件所在的文件夹。<br>然后输入<code>javac demo.java</code>，完成编译之后，在F:\StudyJava文件夹下面生成一个名为demo.class的字节码文件。该文件在Java环境下可以被执行，与demo.java无关。<br>&emsp;&emsp;3.然后输入<code>java demo</code>，将会执行demo.class字节码文件。<br>&emsp;&emsp;完整的操作步骤如图所示:<br>&emsp;&emsp;<img src="/images/Blogs/Java/demo1.png" alt="完整操作图">  </p>
-<h2 id="Java程序的执行步骤："><a href="#Java程序的执行步骤：" class="headerlink" title="Java程序的执行步骤："></a>Java程序的执行步骤：</h2><p>&emsp;&emsp;&emsp;1.编写，编写java代码，并保存为.java文件。<br>&emsp;&emsp;&emsp;2.编译，使用javac将一个.java文件编译成.class文件。<br>&emsp;&emsp;&emsp;3.运行：使用java可以执行.class文件（每次使用java命令执行.class文件时，都会启动JVM,JVM通过CLAAPATH给出的路径加载所需的文件）</p>
+                <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>&emsp;&emsp;大学学过多线程，当时仅仅是为了考试而学，考完试自然也就忘得一干二净了，现在工作面试中，经常被问道关于多线程的问题，却啥也不知道，所以现在开始重新学习吧！  </p>
+<h2 id="多线程的概念"><a href="#多线程的概念" class="headerlink" title="多线程的概念"></a>多线程的概念</h2><p><strong>进程</strong>：进程是程序在操作系统上运行的过程，它是系统进行资源分配和调度的独立单位。进程是一个实体，每个进程都有自己的内存空间和系统资源。<br><strong>线程</strong>：一般将进程内部的任务称为线程。线程是程序中单个顺序的控制流，是程序使用cpu的基本单位。在一个进程内，多个线程是共享一个存储空间的，因此，线程间的通信是比较便捷的。<br><strong>线程和进程的区别</strong>  </p>
+<ol>
+<li>地址空间和资源：进程具有独立的资源空间，而线程之间只能共享进程中的资源空间。  </li>
+<li>通行：进程间的通信开销较大且收到诸多限制，例如具有明确的对象或操作接口并采用统一的通信协议；线程间的通行可以直接读写进程数据，开销较小。  </li>
+<li>切换：进程间的切换比线程间的切换开销大。  </li>
+<li>控制表：进程的控制表是PCB，线程的控制表是TCP。但是TCP的线程状态远小于PCB。  </li>
+<li>线程是进程的一部分。  </li>
+</ol>
+<p><strong>程序和进程的关系</strong>  </p>
+<ol>
+<li>动态性与静态性：程序是静态的，进程是动态的。进程是一个能够独立运行的单位，能与其他线程并发执行；程序不能作为一个独立执行的运行单位。  </li>
+<li>临时性和永久性：进程是临时的，进程有生命周期；程序是永久的。  </li>
+<li>组成：进程包括程序、数据、PCB(进程控制块)。  </li>
+<li>程序与进程之间不一定具有一一对应的关系，因为一个程序可以由多个进程共用，一个进程在其生命周期内可以运行多个程序。  <h2 id="线程的创建"><a href="#线程的创建" class="headerlink" title="线程的创建"></a>线程的创建</h2>只有实现了Runnable接口类的对象才可以被称为线程，Java语言提供了三种创建线程的途径，分别是继承Thread类、实现Runnable类接口、  <h3 id="通过继承Thread类创建线程"><a href="#通过继承Thread类创建线程" class="headerlink" title="通过继承Thread类创建线程"></a>通过继承Thread类创建线程</h3>Thread的定义如下：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class Thread   </span><br><span class="line">extend Object  </span><br><span class="line">implement Runnable</span><br></pre></td></tr></table></figure>
+多线程的定义格式如下:  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class [className] extend Thread&#123;  </span><br><span class="line">属性;   &#x2F;&#x2F;定义类的属性</span><br><span class="line">方法;   &#x2F;&#x2F;定义类的其他方法</span><br><span class="line">public void run()&#123;</span><br><span class="line">    &#x2F;&#x2F;线程代码</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="通过实现Runnable接口创建线程"><a href="#通过实现Runnable接口创建线程" class="headerlink" title="通过实现Runnable接口创建线程"></a>通过实现Runnable接口创建线程</h3>Runnbale接口的定义如下  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public interface Runnable&#123;</span><br><span class="line">    public abstract void run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+通过Runnable()接口实现多线程  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class [className] implement Runnable&#123;  </span><br><span class="line">属性;   &#x2F;&#x2F;定义类的属性</span><br><span class="line">方法;  &#x2F;&#x2F;定义类的其他方法</span><br><span class="line">public void run()&#123;  &#x2F;&#x2F;实现Runnable接口的run()方法</span><br><span class="line">    &#x2F;&#x2F;线程程序代码</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="实现callable-接口"><a href="#实现callable-接口" class="headerlink" title="实现callable()接口"></a>实现callable()接口</h3>&emsp;&emsp;此处省略</li>
+</ol>
+<h2 id="线程的状态"><a href="#线程的状态" class="headerlink" title="线程的状态"></a>线程的状态</h2><ul>
+<li><strong>新建状态</strong>：使用Thread类构造方法新建一个线程对象，此时该线程就处于新建状态。此时的线程已经具有了相应的存储空间和其他资源。  </li>
+<li><strong>就绪状态</strong>：当被创建的线程对象调用start()方法时，线程就由新建状态转为就绪状态，等待CPU的使用权。  </li>
+<li><strong>运行状态</strong>：处于就绪状态的线程获取JVM为其分配的CPU时，线程就处于运行状态，会自动执行run()方法。  </li>
+<li><strong>阻塞状态</strong>：使用sleep()、waite()、suspend()方法，可以使正在运行的线程进入阻塞状态。当线程处于阻塞状态，JVM就不会为其分配CPU。 </li>
+<li><strong>死亡状态</strong>：线程进入死亡状态的情况主要分为俩种：一是线程的run方法执行完毕叫做正常死亡，二是线程运行过程之中发生异常叫做非正常死亡，处于死亡状态的线程不具有继续执行的能力，即使线程状态是“活”的，JVM垃圾回收站会将其回收。<br>&emsp;&emsp;关于线程各种状态的转换请见下图：<br>&emsp;&emsp;<img src="/images/Blogs/Java/Thread.jpg" alt="线程状态转换图"><h2 id="线程的优先级"><a href="#线程的优先级" class="headerlink" title="线程的优先级"></a>线程的优先级</h2>&emsp;&emsp;线程优先级的取值范围为1~10，默认优先级为5，其中main()方法的优先级为5，可以通过setPriority()方法设置一个线程的优先级。</li>
+</ul>
 
             </div>
             <hr/>
@@ -554,7 +579,7 @@
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">星空之下</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2020/05/26/%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%BF%90%E8%A1%8Cjava%E7%A8%8B%E5%BA%8F/" class="b-link-green">在命令行中运行java程序</a>
+                    <a href="/2020/06/08/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="b-link-green">多线程</a>
                 </p>
             </div>
         </div>
@@ -575,9 +600,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/06/08/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
                     <div class="card-image">
@@ -592,9 +618,9 @@
                     <div class="summary">序言&emsp;&emsp;大学学过多线程，当时仅仅是为了考试而学，考完试自然也就忘得一干二净了，现在工作面试中，经常被问道关于多线程的问题，却啥也不知道，所以现在开始重新学习吧！  
 多线程的概念进程：进程是程序在操作系统上运行的过程，它</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -603,6 +629,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -621,21 +648,20 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/08/Http%E4%B8%8EHttps%E7%9A%84%E5%8C%BA%E5%88%AB/">
+                <a href="/2020/05/26/%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E8%BF%90%E8%A1%8Cjava%E7%A8%8B%E5%BA%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Http与Https的区别">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="在命令行中运行java程序">
                         
-                        <span class="card-title">Http与Https的区别</span>
+                        <span class="card-title">在命令行中运行java程序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">HTTP&emsp;&emsp;HTTP协议是一种使用明文数据传输的网络协议。&emsp;&emsp;连接的端口是80端口
-HTTPS&emsp;&emsp;HTTPS是加密传输，HTTPS协议要申请证书到ca，需要一定经济成本。&emsp</div>
+                    <div class="summary">&emsp;&emsp;从大一开始学习java，一直都是用ecplise、intelij这些编译软件写程序，没有用过文本去写过代码，到现在都不知道如何使用cmd运行java程序，经过去网上百度，现在会了，所以记录一下吧。&emsp;&ems</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-08
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-26
                             </span>
                         <span class="publish-author">
                             
@@ -648,8 +674,8 @@ HTTPS&emsp;&emsp;HTTPS是加密传输，HTTPS协议要申请证书到ca，需要
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" target="_blank">
-                        <span class="chip bg-color">计算机网络</span>
+                    <a href="/tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
